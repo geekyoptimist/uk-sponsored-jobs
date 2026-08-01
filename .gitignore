@@ -1,0 +1,13 @@
+# working data - regenerated on every run, and the register is 11MB
+data/
+out/
+config.json
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# os
+.DS_Store
