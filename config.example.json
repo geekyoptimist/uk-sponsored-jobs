@@ -1,0 +1,71 @@
+{
+  "_comment": "Copy to config.json and edit. Derived from the CV in step 1.",
+
+  "register_csv": "data/register.csv",
+  "register_columns": {
+    "name": "Organisation Name",
+    "city": "Town/City",
+    "county": "County",
+    "rating": "Type & Rating",
+    "route": "Route"
+  },
+
+  "sponsor_route_main": "Skilled Worker",
+  "sponsor_route_mobility_prefix": "Global Business Mobility",
+
+  "role_families": {
+    "marketing_growth": {
+      "weight": 3.0,
+      "soc": "2432 Marketing and commercial managers",
+      "min_salary": 50100,
+      "pattern": "product\\s+marketing|growth\\s+marketing|marketing\\s+manager|head\\s+of\\s+growth|growth\\s+lead|head\\s+of\\s+marketing|demand\\s+gen|lifecycle\\s+marketing|brand\\s+marketing|content\\s+marketing|marketing\\s+lead|go.?to.?market|\\bgtm\\b|performance\\s+marketing|crm\\s+manager|senior\\s+marketing|growth\\s+manager|\\bpmm\\b"
+    },
+    "product": {
+      "weight": 2.0,
+      "soc": "2440 Business & financial project management professionals",
+      "min_salary": 56500,
+      "pattern": "product\\s+manager|product\\s+lead|group\\s+product\\s+manager|principal\\s+product\\s+manager|head\\s+of\\s+product|product\\s+owner"
+    },
+    "partnerships_bd": {
+      "weight": 2.6,
+      "soc": "3556 Sales accounts & business development managers",
+      "min_salary": 55200,
+      "pattern": "partnership|business\\s+development|ecosystem\\s+(?:lead|manager|growth)|strategic\\s+alliance|alliances\\s+manager|head\\s+of\\s+partnerships|partner\\s+manager|commercial\\s+lead|channel\\s+manager"
+    }
+  },
+
+  "_exclude_note": "Drops roles that would map to a blocked occupation code (junior sales/marketing) or are simply the wrong function. Keep 'representative' here - BDR/SDR titles code to a medium-skilled SOC and cannot be sponsored.",
+  "exclude_titles": "engineer|developer|designer|data\\s+scientist|analyst\\b|intern\\b|graduate\\b|apprentice|placement|business\\s+development\\s+represent|sales\\s+development\\s+represent|\\bsdr\\b|\\bbdr\\b|account\\s+executive|recruiter|scientist|researcher|accountant|controller|paralegal|counsel|technician|talent\\s+(?:acquisition|partner)|recruiting|recruitment|people\\s+partner|\\bhrbp\\b|executive\\s+search|sourcer|telephone|telesales|inside\\s+sales|call\\s+cent",
+
+  "location_pattern": "\\bunited\\s+kingdom\\b|\\bu\\.?k\\.?\\b|\\blondon\\b|\\bmanchester\\b|\\bedinburgh\\b|\\bcambridge\\b|\\bbristol\\b|\\bleeds\\b|\\bglasgow\\b|\\bbirmingham\\b|\\boxford\\b|\\breading\\b|\\bbelfast\\b|\\bcardiff\\b|\\bengland\\b|\\bscotland\\b|\\bwales\\b|\\bbrighton\\b|\\bnewcastle\\b|\\bsheffield\\b|\\bnottingham\\b",
+
+  "sector_weights": {
+    "crypto": 3.0,
+    "fintech": 3.0,
+    "ai": 2.0,
+    "b2b_saas": 1.8,
+    "consumer": 1.2,
+    "other": 1.0
+  },
+
+  "targets": {
+    "crypto": ["Kraken", "Coinbase", "Copper", "Fireblocks", "Chainalysis", "Ripple"],
+    "fintech": ["Revolut", "Monzo", "Wise", "GoCardless", "Checkout.com", "Teya"],
+    "b2b_saas": ["Contentful", "Datadog", "Intercom", "Typeform"],
+    "ai": ["Cohere", "Synthesia", "ElevenLabs", "PolyAI"],
+    "consumer": ["Spotify", "Deliveroo", "Skyscanner"]
+  },
+
+  "known_entities": {
+    "kraken": "Crypto Facilities Ltd",
+    "coinbase": "CB Payments Ltd",
+    "airtable": "FORMAGRID UK LIMITED",
+    "dojo": "Paymentsense Limited",
+    "refinitiv": "London Stock Exchange Group plc"
+  },
+
+  "generic_brands": [
+    "curve", "safe", "mode", "shares", "stake", "block", "square", "gemini",
+    "ledger", "ripple", "stripe", "starling", "kraken", "arm", "unity"
+  ]
+}
